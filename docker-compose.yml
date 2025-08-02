@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://phamthithuynhi:Thuynhi0099@cluster0.3m9wrpu.mongodb.net/DiaTech?retryWrites=true&w=majority&appName=Cluster0
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
